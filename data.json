@@ -1,0 +1,69 @@
+{
+  "resumeTitle": {
+    "title": "SJOLEEE"
+  },
+  "information": {
+    "name": "이상조",
+    "contact": [
+      { "id": 0, "name": "Email", "href": "cent7425@gmail.com", "isEmail": true },
+      { "id": 1, "name": "Github", "href": "https://github.com/sjoleee" },
+      { "id": 2, "name": "Blog", "href": "https://velog.io/@sjoleee_" }
+    ]
+  },
+  "workExperience": [
+    {
+      "id": 0,
+      "name": "인프랩",
+      "hasIcon": true,
+      "position": "MD",
+      "period": ["2020. 01", "2021. 09"]
+    }
+  ],
+  "project": [
+    {
+      "id": 0,
+      "name": "첫번째 프로젝트",
+      "description": "프로젝트를 열심히 했어요",
+      "hasIcon": true,
+      "repoUrl": "https://github.com/sjoleee/",
+      "isTeam": true,
+      "period": ["2022. 07", "2022. 09"],
+      "stack": ["React.js", "JavaScript", "styled-components", "Recoil"]
+    },
+    {
+      "id": 1,
+      "name": "두번째 프로젝트",
+      "description": "재미있는 프로젝트를 했어요",
+      "hasIcon": true,
+      "webUrl": "https://github.com/sjoleee/",
+      "repoUrl": "https://github.com/sjoleee/",
+      "isTeam": false,
+      "period": ["2022. 10", "2022. 11"],
+      "stack": ["JavaScript", "HTML/CSS"]
+    }
+  ],
+  "activity": [
+    {
+      "id": 0,
+      "name": "엄청난 활동",
+      "period": ["2022. 06", "2022. 08"],
+      "description": "엄청난 활동을 했습니다!"
+    }
+  ],
+  "education": [
+    {
+      "id": 0,
+      "name": "엄청난 교육",
+      "description": "엄청난 교육을 받았습니다!",
+      "period": ["2013. 02", "2020. 02"]
+    }
+  ],
+  "certificate": [
+    {
+      "id": 0,
+      "name": "TOEIC 1000점",
+      "date": "2019. 07. 28",
+      "organizer": "ETS"
+    }
+  ]
+}
