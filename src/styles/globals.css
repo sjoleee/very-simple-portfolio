@@ -48,7 +48,7 @@
 
   ul,
   ol {
-    @apply flex flex-col gap-2 pt-2 ml-4 list-outside list-disc;
+    @apply flex flex-col gap-2 py-2 ml-4 list-outside list-disc;
   }
 
   li ul {
