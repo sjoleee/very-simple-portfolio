@@ -1,20 +1,19 @@
 {
   "resumeTitle": {
-    "title": "SJOLEEE"
+    "title": "Hong Gil Dong"
   },
   "information": {
-    "name": "이상조",
+    "name": "홍길동",
     "contact": [
-      { "id": 0, "name": "Email", "href": "cent7425@gmail.com", "isEmail": true },
-      { "id": 1, "name": "Github", "href": "https://github.com/sjoleee" },
-      { "id": 2, "name": "Blog", "href": "https://velog.io/@sjoleee_" }
+      { "id": 0, "name": "Email", "href": "honggildong@gmail.com", "isEmail": true },
+      { "id": 1, "name": "Github", "href": "https://github.com/honggildong" },
+      { "id": 2, "name": "Blog", "href": "https://velog.io/@honggildong" }
     ]
   },
   "workExperience": [
     {
       "id": 0,
       "name": "인프랩",
-      "hasIcon": true,
       "position": "MD",
       "period": ["2020. 01", "2021. 09"]
     }
@@ -24,7 +23,6 @@
       "id": 0,
       "name": "첫번째 프로젝트",
       "description": "프로젝트를 열심히 했어요",
-      "hasIcon": true,
       "repoUrl": "https://github.com/sjoleee/",
       "isTeam": true,
       "period": ["2022. 07", "2022. 09"],
@@ -34,7 +32,6 @@
       "id": 1,
       "name": "두번째 프로젝트",
       "description": "재미있는 프로젝트를 했어요",
-      "hasIcon": true,
       "webUrl": "https://github.com/sjoleee/",
       "repoUrl": "https://github.com/sjoleee/",
       "isTeam": false,

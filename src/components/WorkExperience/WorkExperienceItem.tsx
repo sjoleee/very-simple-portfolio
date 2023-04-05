@@ -4,20 +4,11 @@ import remarkGfm from "remark-gfm";
 
 import { WorkExperienceProps } from "@/types";
 
-const WorkExperienceItem = ({
-  id,
-  name,
-  hasIcon,
-  position,
-  period,
-  markdown,
-}: WorkExperienceProps) => {
-  const imgSrc = `/images/workExperience/${id}.png`;
-
+const WorkExperienceItem = ({ name, position, period, markdown, imgSrc }: WorkExperienceProps) => {
   return (
     <div className="flex flex-col md:flex-row gap-6 md:gap-0">
       <div className="flex md:flex-col items-center md:items-start mr-4 gap-6">
-        {hasIcon && (
+        {imgSrc && (
           <Image
             src={imgSrc}
             width="200"

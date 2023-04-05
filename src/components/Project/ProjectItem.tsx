@@ -7,23 +7,20 @@ import Links from "./Links";
 import { ProjectProps } from "@/types";
 
 const ProjectItem = ({
-  id,
   name,
   description,
-  hasIcon,
   repoUrl,
   webUrl,
   period,
   stack,
   markdown,
+  imgSrc,
 }: ProjectProps) => {
-  const imgSrc = `/images/project/${id}.png`;
-
   return (
     <div className="flex flex-col md:flex-row gap-2 md:gap-0">
       <div className="flex flex-col gap-2">
         <div className="flex md:flex-col items-center md:items-start mr-4 gap-6">
-          {hasIcon && (
+          {imgSrc && (
             <Image
               src={imgSrc}
               width="200"

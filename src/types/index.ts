@@ -2,23 +2,23 @@ export interface WorkExperienceProps {
   id: number;
   name: string;
   description?: string;
-  hasIcon?: boolean;
   position: string;
   period: string[];
   markdown?: string;
+  imgSrc?: string;
 }
 
 export interface ProjectProps {
   id: number;
   name: string;
   description: string;
-  hasIcon?: boolean;
   repoUrl: string;
   webUrl?: string;
   isTeam?: boolean;
   period: string[];
   stack: string[];
   markdown?: string;
+  imgSrc?: string;
 }
 
 export interface DataProps {

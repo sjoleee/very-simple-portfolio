@@ -1,4 +1,4 @@
-import fsPromises from "fs/promises";
+import fsPromises, * as fs from "fs/promises";
 import path from "path";
 
 import { NextPage } from "next";
@@ -48,41 +48,58 @@ export const getStaticProps = async () => {
   const jsonData = await fsPromises.readFile(filePath, "utf8");
   const objectData = JSON.parse(jsonData);
 
-  const workExperienceWithMd = objectData.workExperience.map((item: WorkExperienceProps) => {
-    const getMd = async () => {
-      try {
-        const markdownModule = await import(`@/assets/markdown/workExperience/${item.id}.md`);
-        return { ...item, markdown: markdownModule.default };
-      } catch {
-        console.log("no markdown");
-        return item;
-      }
-    };
-    return getMd();
+  const workExperienceWithData = objectData.workExperience.map(
+    async (item: WorkExperienceProps) => {
+      return getImgSrc({
+        section: "workExperience",
+        item: await getMd({ section: "workExperience", item }),
+      });
+    },
+  );
+
+  const projectWithData = objectData.project.map(async (item: ProjectProps) => {
+    return getImgSrc({ section: "project", item: await getMd({ section: "project", item }) });
   });
-
-  const workExperienceWithMdResult = await Promise.all(workExperienceWithMd);
-
-  const projectWithMd = objectData.project.map((item: ProjectProps) => {
-    const getMd = async () => {
-      try {
-        const markdownModule = await import(`@/assets/markdown/project/${item.id}.md`);
-        return { ...item, markdown: markdownModule.default };
-      } catch {
-        console.log("no markdown");
-        return item;
-      }
-    };
-    return getMd();
-  });
-
-  const projectWithMdResult = await Promise.all(projectWithMd);
 
   return {
     props: {
       ...objectData,
-      workExperience: workExperienceWithMdResult,
-      project: projectWithMdResult,
+      workExperience: await Promise.all(workExperienceWithData),
+      project: await Promise.all(projectWithData),
     },
   };
+};
+
+const getMd = async ({
+  section,
+  item,
+}: {
+  section: string;
+  item: ProjectProps | WorkExperienceProps;
+}) => {
+  try {
+    const markdownModule = await import(`@/assets/markdown/${section}/${item.id}.md`);
+    return { ...item, markdown: markdownModule.default as string };
+  } catch {
+    console.log("no markdown");
+    return item;
+  }
+};
+
+const getImgSrc = async ({
+  section,
+  item,
+}: {
+  section: string;
+  item: ProjectProps | WorkExperienceProps;
+}) => {
+  const imgSrc = `/images/${section}/${item.id}.png`;
+  const filePath = path.join(process.cwd(), "public", imgSrc);
+  try {
+    await fs.stat(filePath);
+    return { ...item, imgSrc: imgSrc };
+  } catch {
+    console.log("no img");
+    return item;
+  }
 };
