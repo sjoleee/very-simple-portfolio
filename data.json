@@ -13,8 +13,8 @@
   "workExperience": [
     {
       "id": 0,
-      "name": "인프랩",
-      "position": "MD",
+      "name": "커피프린스",
+      "position": "Front-end Engineer",
       "period": ["2020. 01", "2021. 09"]
     }
   ],
@@ -31,7 +31,7 @@
     {
       "id": 1,
       "name": "두번째 프로젝트",
-      "description": "재미있는 프로젝트를 했어요",
+      "description": "이미지가 없다면 이렇게 보입니다.",
       "webUrl": "https://github.com/sjoleee/",
       "repoUrl": "https://github.com/sjoleee/",
       "isTeam": false,
