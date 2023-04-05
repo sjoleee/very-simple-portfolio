@@ -1,6 +1,6 @@
 import Introduce from "./Introduce";
 
-import { DataProps } from "@/pages";
+import { DataProps } from "@/types";
 
 const Information = ({ information }: Pick<DataProps, "information">) => {
   return (
@@ -8,7 +8,8 @@ const Information = ({ information }: Pick<DataProps, "information">) => {
       <div className="flex flex-col gap-2">
         <h1 className="leading-[1.15] text-5xl ">
           안녕하세요,
-          <br /> 프론트엔드 개발자{" "}
+          <br /> 프론트엔드 개발자
+          <br />
           <span className="text-PRIMARY selection:bg-PRIMARY_LIGHT font-semibold">
             {information.name}
           </span>

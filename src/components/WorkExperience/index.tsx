@@ -1,7 +1,7 @@
 import SectionTitle from "../SectionTitle";
 import WorkExperienceItem from "./WorkExperienceItem";
 
-import { DataProps } from "@/pages";
+import { DataProps } from "@/types";
 
 const WorkExperience = ({ workExperience }: Pick<DataProps, "workExperience">) => {
   return (

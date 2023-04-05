@@ -1,7 +1,7 @@
 import SectionTitle from "../SectionTitle";
 import CertificateItem from "./CertificateItem";
 
-import { DataProps } from "@/pages";
+import { DataProps } from "@/types";
 
 const Certificate = ({ certificate }: Pick<DataProps, "certificate">) => {
   return (

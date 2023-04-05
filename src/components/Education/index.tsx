@@ -1,7 +1,7 @@
 import SectionTitle from "../SectionTitle";
 import EducationItem from "./EducationItem";
 
-import { DataProps } from "@/pages";
+import { DataProps } from "@/types";
 
 const Education = ({ education }: Pick<DataProps, "education">) => {
   return (

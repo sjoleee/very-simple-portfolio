@@ -1,4 +1,4 @@
-import { DataProps } from "@/pages";
+import { DataProps } from "@/types";
 
 const ResumeTitle = ({ resumeTitle }: Pick<DataProps, "resumeTitle">) => {
   return (

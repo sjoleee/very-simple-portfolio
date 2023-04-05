@@ -1,9 +1,10 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 import Links from "./Links";
+
+import { ProjectProps } from "@/types";
 
 const ProjectItem = ({
   id,
@@ -14,29 +15,9 @@ const ProjectItem = ({
   webUrl,
   period,
   stack,
-}: {
-  id: number;
-  name: string;
-  description: string;
-  hasIcon?: boolean;
-  repoUrl: string;
-  webUrl?: string;
-  period: string[];
-  stack: string[];
-}) => {
-  const [markdown, setMarkdown] = useState<string>("");
+  markdown,
+}: ProjectProps) => {
   const imgSrc = `/images/project/${id}.png`;
-
-  useEffect(() => {
-    (async () => {
-      try {
-        const markdownModule = await import(`@/assets/markdown/project/${id}.md`);
-        setMarkdown(markdownModule.default);
-      } catch {
-        console.log("no markdown");
-      }
-    })();
-  }, []);
 
   return (
     <div className="flex flex-col md:flex-row gap-2 md:gap-0">
@@ -76,7 +57,7 @@ const ProjectItem = ({
             ))}
           </div>
         </div>
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown ?? ""}</ReactMarkdown>
       </div>
     </div>
   );

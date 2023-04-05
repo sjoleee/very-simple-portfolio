@@ -1,7 +1,8 @@
 import Image from "next/image";
-import { useEffect, useState } from "react";
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+
+import { WorkExperienceProps } from "@/types";
 
 const WorkExperienceItem = ({
   id,
@@ -9,23 +10,9 @@ const WorkExperienceItem = ({
   hasIcon,
   position,
   period,
-}: {
-  id: number;
-  name: string;
-  description?: string;
-  hasIcon?: boolean;
-  position: string;
-  period: string[];
-}) => {
-  const [markdown, setMarkdown] = useState<string>("");
+  markdown,
+}: WorkExperienceProps) => {
   const imgSrc = `/images/workExperience/${id}.png`;
-
-  useEffect(() => {
-    (async () => {
-      const markdownModule = await import(`@/assets/markdown/workExperience/${id}.md`);
-      setMarkdown(markdownModule.default);
-    })();
-  }, []);
 
   return (
     <div className="flex flex-col md:flex-row gap-6 md:gap-0">
@@ -48,7 +35,7 @@ const WorkExperienceItem = ({
         </div>
       </div>
       <div className="md:border-GRAY_LIGHT md:border-solid md:border-l-[1px] md:pl-4 markdown w-full">
-        <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>
+        <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown ?? ""}</ReactMarkdown>
       </div>
     </div>
   );

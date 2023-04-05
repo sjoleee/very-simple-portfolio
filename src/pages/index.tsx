@@ -13,53 +13,7 @@ import Project from "@/components/Project";
 import ResumeTitle from "@/components/ResumeTitle";
 // import ScrollProgress from "@/components/ScrollProgress";
 import WorkExperience from "@/components/WorkExperience";
-
-export interface DataProps {
-  resumeTitle: {
-    title: string;
-  };
-  information: {
-    name: string;
-    contact: { id: number; name: string; href: string; isEmail?: boolean }[];
-  };
-  workExperience: {
-    id: number;
-    name: string;
-    description?: string;
-    hasIcon?: boolean;
-    position: string;
-    period: string[];
-  }[];
-  project: {
-    id: number;
-    name: string;
-    description: string;
-    hasIcon?: boolean;
-    repoUrl: string;
-    webUrl?: string;
-    isTeam?: boolean;
-    period: string[];
-    stack: string[];
-  }[];
-  activity: {
-    id: number;
-    name: string;
-    description: string;
-    period: string[];
-  }[];
-  education: {
-    id: number;
-    name: string;
-    description: string;
-    period: string[];
-  }[];
-  certificate: {
-    id: number;
-    name: string;
-    date: string;
-    organizer: string;
-  }[];
-}
+import { DataProps, ProjectProps, WorkExperienceProps } from "@/types";
 
 const Home: NextPage<DataProps> = ({
   resumeTitle,
@@ -94,7 +48,41 @@ export const getStaticProps = async () => {
   const jsonData = await fsPromises.readFile(filePath, "utf8");
   const objectData = JSON.parse(jsonData);
 
+  const workExperienceWithMd = objectData.workExperience.map((item: WorkExperienceProps) => {
+    const getMd = async () => {
+      try {
+        const markdownModule = await import(`@/assets/markdown/workExperience/${item.id}.md`);
+        return { ...item, markdown: markdownModule.default };
+      } catch {
+        console.log("no markdown");
+        return item;
+      }
+    };
+    return getMd();
+  });
+
+  const workExperienceWithMdResult = await Promise.all(workExperienceWithMd);
+
+  const projectWithMd = objectData.project.map((item: ProjectProps) => {
+    const getMd = async () => {
+      try {
+        const markdownModule = await import(`@/assets/markdown/project/${item.id}.md`);
+        return { ...item, markdown: markdownModule.default };
+      } catch {
+        console.log("no markdown");
+        return item;
+      }
+    };
+    return getMd();
+  });
+
+  const projectWithMdResult = await Promise.all(projectWithMd);
+
   return {
-    props: objectData,
+    props: {
+      ...objectData,
+      workExperience: workExperienceWithMdResult,
+      project: projectWithMdResult,
+    },
   };
 };
