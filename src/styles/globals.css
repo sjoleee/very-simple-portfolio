@@ -3,11 +3,6 @@
 @tailwind utilities;
 
 @layer base {
-  *:not(path),
-  html {
-    @apply font-normal break-keep selection:bg-PRIMARY_LIGHT text-BLACK dark:text-white dark:bg-BLACK;
-  }
-
   h1 {
     @apply font-semibold text-5xl;
   }
