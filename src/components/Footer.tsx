@@ -2,8 +2,10 @@ import ContactItem from "./ContactItem";
 
 const Footer = ({
   contact,
+  name,
 }: {
   contact: { id: number; name: string; href: string; isEmail?: boolean }[];
+  name: string;
 }) => {
   return (
     <footer className="flex flex-col gap-2 justify-center items-center bg-GRAY h-28 text-xs text-white dark:bg-GRAY_EXTRAHEAVY dark:text-GRAY_HEAVY">
@@ -15,10 +17,10 @@ const Footer = ({
         ))}
       </div>
       <div className="flex flex-col items-center">
-        <a target="_blank" rel="noreferrer" href="https://github.com/sjoleee/simple-portfolio">
-          <span>Copyright 2023 sjoleee</span>
+        <span className="whitespace-pre-wrap text-center">{`Copyright 2023. ${name} All rights reserved.`}</span>
+        <a target="_blank" rel="noreferrer" href="https://github.com/sjoleee/very-simple-portfolio">
+          Powered by very-simple-portfolio
         </a>
-        <span>All rights reserved.</span>
       </div>
     </footer>
   );
