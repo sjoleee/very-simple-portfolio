@@ -2,6 +2,7 @@
   "resumeTitle": {
     "title": "Hong Gil Dong"
   },
+
   "information": {
     "name": "홍길동",
     "contact": [
@@ -10,55 +11,108 @@
       { "id": 2, "name": "Blog", "href": "https://velog.io/@honggildong" }
     ]
   },
+
   "workExperience": [
     {
       "id": 0,
-      "name": "커피프린스",
+      "name": "커피프린스 1호점",
       "position": "Front-end Engineer",
       "period": ["2020. 01", "2021. 09"]
-    }
-  ],
-  "project": [
-    {
-      "id": 0,
-      "name": "첫번째 프로젝트",
-      "description": "프로젝트를 열심히 했어요",
-      "repoUrl": "https://github.com/sjoleee/",
-      "isTeam": true,
-      "period": ["2022. 07", "2022. 09"],
-      "stack": ["React.js", "JavaScript", "styled-components", "Recoil"]
     },
     {
       "id": 1,
-      "name": "두번째 프로젝트",
+      "name": "커피프린스 2호점",
+      "position": "바리스타",
+      "period": ["2020. 01", "2021. 09"]
+    },
+    {
+      "id": 2,
+      "name": "커피프린스 3호점",
+      "position": "바리스타",
+      "period": ["2020. 01", "now"]
+    }
+  ],
+
+  "project": [
+    {
+      "id": 0,
+      "name": "첫번째 팀 프로젝트",
+      "description": "프로젝트에 대한 간단한 설명을 적을 수 있습니다. 어떤 프로젝트인지 주제나 강조하고 싶은 부분을 적어보세요.",
+      "webUrl": "https://github.com/sjoleee/",
+      "repoUrl": "https://github.com/sjoleee/",
+      "isTeam": true,
+      "period": ["2022. 07", "2022. 09"],
+      "stack": ["사용한 기술을 적어주세요", "React.js", "JavaScript", "styled-components", "Recoil"]
+    },
+    {
+      "id": 1,
+      "name": "첫번째 개인 프로젝트",
       "description": "이미지가 없다면 이렇게 보입니다.",
       "webUrl": "https://github.com/sjoleee/",
       "repoUrl": "https://github.com/sjoleee/",
       "isTeam": false,
       "period": ["2022. 10", "2022. 11"],
       "stack": ["JavaScript", "HTML/CSS"]
+    },
+    {
+      "id": 2,
+      "name": "두번째 팀 프로젝트",
+      "description": "두번째 팀 프로젝트입니다. id 내림차순으로 정렬됩니다. isTeam이 true인 프로젝트로만 필터됩니다.",
+      "webUrl": "https://github.com/sjoleee/",
+      "isTeam": true,
+      "period": ["2022. 10", "2022. 11"],
+      "stack": ["JavaScript", "HTML/CSS"]
+    },
+    {
+      "id": 3,
+      "name": "두번째 개인 프로젝트",
+      "description": "두번째 개인 프로젝트입니다. id 내림차순으로 정렬됩니다. isTeam이 false인 프로젝트로만 필터됩니다.",
+      "repoUrl": "https://github.com/sjoleee/",
+      "isTeam": false,
+      "period": ["2022. 10", "2022. 11"],
+      "stack": ["JavaScript", "HTML/CSS"]
     }
   ],
+
   "activity": [
     {
       "id": 0,
-      "name": "엄청난 활동",
+      "name": "첫번째 활동",
       "period": ["2022. 06", "2022. 08"],
-      "description": "엄청난 활동을 했습니다!"
+      "description": "첫번째 활동에 대한 간략한 설명"
+    },
+    {
+      "id": 1,
+      "name": "두번째 활동",
+      "period": ["2022. 06", "2022. 08"],
+      "description": "두번째 활동에 대한 간략한 설명"
     }
   ],
   "education": [
     {
       "id": 0,
-      "name": "엄청난 교육",
-      "description": "엄청난 교육을 받았습니다!",
-      "period": ["2013. 02", "2020. 02"]
+      "name": "첫번째 교육",
+      "period": ["2013. 02", "2020. 02"],
+      "description": "첫번째 교육에 대한 간략한 설명"
+    },
+    {
+      "id": 1,
+      "name": "두번째 교육",
+      "period": ["2013. 02", "2020. 02"],
+      "description": "두번째 교육에 대한 간략한 설명"
     }
   ],
+
   "certificate": [
     {
       "id": 0,
       "name": "TOEIC 1000점",
+      "date": "2019. 07. 28",
+      "organizer": "ETS"
+    },
+    {
+      "id": 1,
+      "name": "OPIC IH",
       "date": "2019. 07. 28",
       "organizer": "ETS"
     }

@@ -1,0 +1,62 @@
+{
+  "resumeTitle": {
+    "title": ""
+  },
+
+  "information": {
+    "name": "",
+    "contact": [
+      { "id": 0, "name": "Email", "href": "", "isEmail": true },
+      { "id": 1, "name": "Github", "href": "" },
+      { "id": 2, "name": "Blog", "href": "" }
+    ]
+  },
+
+  "workExperience": [
+    {
+      "id": 0,
+      "name": "",
+      "position": "",
+      "period": ["", ""]
+    }
+  ],
+
+  "project": [
+    {
+      "id": 0,
+      "name": "",
+      "description": "",
+      "webUrl": "",
+      "repoUrl": "",
+      "isTeam": null,
+      "period": ["", ""],
+      "stack": ["", "", ""]
+    }
+  ],
+
+  "activity": [
+    {
+      "id": 0,
+      "name": "",
+      "period": ["", ""],
+      "description": ""
+    }
+  ],
+  "education": [
+    {
+      "id": 0,
+      "name": "",
+      "description": "",
+      "period": ["", ""]
+    }
+  ],
+
+  "certificate": [
+    {
+      "id": 0,
+      "name": "",
+      "date": "",
+      "organizer": ""
+    }
+  ]
+}

@@ -1,10 +1,10 @@
 import ReactMarkdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-import markdown from "@/assets/markdown/introduce.md";
+import { InformationProps } from "@/types";
 
-const Introduce = () => {
-  return <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown}</ReactMarkdown>;
+const Introduce = ({ markdown }: Pick<InformationProps, "markdown">) => {
+  return <ReactMarkdown remarkPlugins={[remarkGfm]}>{markdown ?? ""}</ReactMarkdown>;
 };
 
 export default Introduce;

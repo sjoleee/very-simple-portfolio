@@ -1,3 +1,10 @@
+export interface InformationProps {
+  name: string;
+  contact: { id: number; name: string; href: string; isEmail?: boolean }[];
+  markdown?: string;
+  imgSrc?: string;
+}
+
 export interface WorkExperienceProps {
   id: number;
   name: string;
@@ -25,10 +32,7 @@ export interface DataProps {
   resumeTitle: {
     title: string;
   };
-  information: {
-    name: string;
-    contact: { id: number; name: string; href: string; isEmail?: boolean }[];
-  };
+  information: InformationProps;
   workExperience: WorkExperienceProps[];
   project: ProjectProps[];
   activity: {

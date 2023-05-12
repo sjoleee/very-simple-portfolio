@@ -13,7 +13,7 @@ import Project from "@/components/Project";
 import ResumeTitle from "@/components/ResumeTitle";
 // import ScrollProgress from "@/components/ScrollProgress";
 import WorkExperience from "@/components/WorkExperience";
-import { DataProps, ProjectProps, WorkExperienceProps } from "@/types";
+import { DataProps, InformationProps, ProjectProps, WorkExperienceProps } from "@/types";
 
 const Home: NextPage<DataProps> = ({
   resumeTitle,
@@ -48,6 +48,11 @@ export const getStaticProps = async () => {
   const jsonData = await fsPromises.readFile(filePath, "utf8");
   const objectData = JSON.parse(jsonData);
 
+  const informationWithData = getImgSrc({
+    section: "information",
+    item: await getMd({ section: "information", item: { ...objectData.information } }),
+  });
+
   const workExperienceWithData = objectData.workExperience.map(
     async (item: WorkExperienceProps) => {
       return getImgSrc({
@@ -64,6 +69,7 @@ export const getStaticProps = async () => {
   return {
     props: {
       ...objectData,
+      information: await informationWithData,
       workExperience: await Promise.all(workExperienceWithData),
       project: await Promise.all(projectWithData),
     },
@@ -75,10 +81,12 @@ const getMd = async ({
   item,
 }: {
   section: string;
-  item: ProjectProps | WorkExperienceProps;
+  item: InformationProps | ProjectProps | WorkExperienceProps;
 }) => {
   try {
-    const markdownModule = await import(`@/assets/markdown/${section}/${item.id}.md`);
+    const markdownModule = await import(
+      `../../public/markdown/${section}/${"id" in item ? item.id : "introduce"}.md`
+    );
     return { ...item, markdown: markdownModule.default as string };
   } catch {
     console.log("no markdown");
@@ -91,9 +99,9 @@ const getImgSrc = async ({
   item,
 }: {
   section: string;
-  item: ProjectProps | WorkExperienceProps;
+  item: InformationProps | ProjectProps | WorkExperienceProps;
 }) => {
-  const imgSrc = `/images/${section}/${item.id}.png`;
+  const imgSrc = `/images/${section}/${"id" in item ? item.id : "profile"}.png`;
   const filePath = path.join(process.cwd(), "public", imgSrc);
   try {
     await fs.stat(filePath);
