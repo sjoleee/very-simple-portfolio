@@ -26,7 +26,7 @@ const Information = ({ information }: Pick<DataProps, "information">) => {
           ))}
         </div>
       </div>
-      <Introduce />
+      <Introduce markdown={information.markdown} />
     </div>
   );
 };
