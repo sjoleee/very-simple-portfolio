@@ -4,11 +4,11 @@
 
 @layer base {
   h1 {
-    @apply font-semibold text-5xl;
+    @apply font-semibold text-5xl py-2;
   }
 
   h2 {
-    @apply font-semibold text-4xl;
+    @apply font-semibold text-4xl py-2;
   }
 
   h3 {
@@ -21,8 +21,19 @@
   a {
     @apply cursor-pointer hover:cursor-pointer;
   }
+
   .markdown a {
     @apply font-mono bg-GRAY_HEAVY dark:bg-white py-[2px] px-1.5 rounded-md text-xs text-white dark:text-BLACK hover:bg-BLACK dark:hover:bg-GRAY_HEAVY;
+  }
+
+  .markdown h1,
+  .markdown h2 {
+    @apply pt-4 pb-2;
+  }
+
+  .markdown h3,
+  .markdown h4 {
+    @apply pt-4 pb-2;
   }
 
   strong {
