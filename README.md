@@ -3,7 +3,7 @@
 
  
   ![vsp](https://github.com/sjoleee/very-simple-portfolio/assets/82137004/3a22ec87-cc1a-4862-9d6e-ae8e1317891f)
-
+This project is licensed under the terms of the MIT license.
   <br />
 
 # 📝 very simple portfolio
@@ -891,3 +891,5 @@ https://analytics.google.com/ 에서 페이지 방문과 실시간 방문자를 
 
 버그나 개선에 대한 의견은 언제든 환영입니다
 👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍
+
+
