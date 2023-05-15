@@ -17,19 +17,13 @@
       "id": 0,
       "name": "커피프린스 1호점",
       "position": "Front-end Engineer",
-      "period": ["2020. 01", "2021. 09"]
+      "period": ["2019. 01", "2019. 09"]
     },
     {
       "id": 1,
       "name": "커피프린스 2호점",
       "position": "바리스타",
-      "period": ["2020. 01", "2021. 09"]
-    },
-    {
-      "id": 2,
-      "name": "커피프린스 3호점",
-      "position": "바리스타",
-      "period": ["2020. 01", "now"]
+      "period": ["2022. 01", "now"]
     }
   ],
 
@@ -47,26 +41,8 @@
     {
       "id": 1,
       "name": "첫번째 개인 프로젝트",
-      "description": "이미지가 없다면 이렇게 보입니다.",
+      "description": "프로젝트에 대한 간단한 설명을 적을 수 있습니다. 어떤 프로젝트인지 주제나 강조하고 싶은 부분을 적어보세요.",
       "webUrl": "https://github.com/sjoleee/",
-      "repoUrl": "https://github.com/sjoleee/",
-      "isTeam": false,
-      "period": ["2022. 10", "2022. 11"],
-      "stack": ["JavaScript", "HTML/CSS"]
-    },
-    {
-      "id": 2,
-      "name": "두번째 팀 프로젝트",
-      "description": "두번째 팀 프로젝트입니다. id 내림차순으로 정렬됩니다. isTeam이 true인 프로젝트로만 필터됩니다.",
-      "webUrl": "https://github.com/sjoleee/",
-      "isTeam": true,
-      "period": ["2022. 10", "2022. 11"],
-      "stack": ["JavaScript", "HTML/CSS"]
-    },
-    {
-      "id": 3,
-      "name": "두번째 개인 프로젝트",
-      "description": "두번째 개인 프로젝트입니다. id 내림차순으로 정렬됩니다. isTeam이 false인 프로젝트로만 필터됩니다.",
       "repoUrl": "https://github.com/sjoleee/",
       "isTeam": false,
       "period": ["2022. 10", "2022. 11"],
@@ -88,6 +64,7 @@
       "description": "두번째 활동에 대한 간략한 설명"
     }
   ],
+
   "education": [
     {
       "id": 0,

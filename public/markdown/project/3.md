@@ -1,0 +1,7 @@
+- **‘Cause I know what you like boy**
+- **You're my chemical `hype boy`**
+- 내 지난날들은 눈 뜨면 잊는 꿈
+  - `Hype boy` 너만 원해 `Hype boy` 내가 전해
+- And we can go high **말해봐** yeah **느껴봐** mm mm
+- Take him to the sky
+- You know I `hype you boy`
