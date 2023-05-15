@@ -764,6 +764,7 @@ NEXT_PUBLIC_GOOGLE_ANALYTICS = 'G-0000000000' // 아까 받은 측정 ID를 입�
 ```
 
 <br />
+
 이제, `/src/lib/gtag.ts` 폴더와 파일을 생성하고 아래와 같이 작성해주세요.<br />
 GA에서 제공하는 태그입니다. 이 경우에는 페이지가 보여지면 집계될 수 있도록 하는 `pageview` 함수가 작성되어 있습니다.<br />
 아마 에러가 발생할텐데, 계속해서 진행하시면 해결됩니다!
@@ -797,6 +798,7 @@ export const event = ({ action, category, label, value }: GTagEvent) => {
 ```
 
 <br />
+
 루트 경로에 `/environment.d.ts` 파일을 만들고 아래와 같이 작성해주세요.
 
 ```ts
@@ -823,7 +825,7 @@ npm install @types/gtag.js --dev
 
 <br />
 
-/src/pages/_app.tsx 에 다음과 같은 코드를 추가합니다.
+`/src/pages/_app.tsx` 에 다음과 같은 코드를 추가합니다.
 
 ```js
 
