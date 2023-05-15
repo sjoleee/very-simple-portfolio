@@ -873,10 +873,22 @@ const App = ({ Component, pageProps }: AppProps) => {
 ```
 
 
+
 <br />
 <br />
 
-**- Step 3️⃣ GA 데이터 수집을 기다려주세요.**
+**- Step 3️⃣ Vercel에서 환경변수를 등록해주세요.**
+
+아까 `.env`로 환경변수를 등록했지만, vercel에 따로 등록해주어야해요. (.env는 gitignore로 인해 깃에 포함되지 않아요)<br />
+vercel에서 포트폴리오 프로젝트의 설정으로 들어간 다음, 아래 사진처럼 환경변수를 등록해주세요.
+
+<img width="1260" alt="image" src="https://github.com/sjoleee/very-simple-portfolio/assets/82137004/1dac46fe-9028-4d29-aa60-55ce424e2539">
+
+
+<br />
+<br />
+
+**- Step 4️⃣ GA 데이터 수집을 기다려주세요.**
 
 GA가 열심히 데이터를 수집하여 며칠내로 데이터 조회가 가능해질거에요.<br />
 https://analytics.google.com/ 에서 페이지 방문과 실시간 방문자를 볼 수 있게 될거에요!
