@@ -729,7 +729,6 @@ https://vercel.com/new 에서 github으로 로그인하신 후, 포트폴리오 
 
 포트폴리오에 방문자가 몇명인지 궁금하지 않으셨나요?🕵️‍♀️<br />
 간단한 GA 설정만으로 데이터 수집이 가능합니다!
-이제구글에 포트폴리오가 검색될 수 있도록 [구글 서치콘솔에 URL 색인 생성을 요청](https://support.google.com/webmasters/answer/9012289?hl=ko#request_indexing)하세요!
 
 <br />
 <br />
@@ -896,6 +895,10 @@ GA가 열심히 데이터를 수집하여 며칠내로 데이터 조회가 가�
 https://analytics.google.com/ 에서 페이지 방문과 실시간 방문자를 볼 수 있게 될거에요!
 
 
+그리고, 구글에 포트폴리오가 검색될 수 있도록 [구글 서치콘솔에 URL 색인 생성을 요청](https://support.google.com/webmasters/answer/9012289?hl=ko#request_indexing)하세요!
+
+<br />
+<br />
 
 # Done
 
@@ -903,7 +906,7 @@ https://analytics.google.com/ 에서 페이지 방문과 실시간 방문자를 
 👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍
 
 
-버그나 개선에 대한 의견은 언제든 환영입니다
+버그나 개선 등의 의견은 언제든 환영입니다!
 👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍👍
 
 
