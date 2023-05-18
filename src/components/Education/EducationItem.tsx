@@ -14,7 +14,7 @@ const EducationItem = ({
           <h3>{name}</h3>
           <span>{`${period[0]}${period[1] ? " - " + period[1] : ""}`}</span>
         </div>
-        <span>{description}</span>
+        <span className="whitespace-pre-wrap">{`${description}`}</span>
       </div>
     </div>
   );
