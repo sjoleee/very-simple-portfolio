@@ -63,7 +63,8 @@ https://github.com/sjoleee/very-simple-portfolio/assets/82137004/9d164f7d-cc24-4
 
 # change log
 
-> `23.05.18` `project` `activity` `education` 의 `description` 항목에 `\n`을 입력하면 줄바꿈이 가능해졌어요.
+> `23.05.18` `project` `activity` `education` 의 `description` 항목에 `\n`을 입력하면 줄바꿈이 가능해졌어요.<br />
+> (ex. "description": "줄바꿈\n줄바꿈")
 
 <br />
 
