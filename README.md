@@ -59,6 +59,12 @@ https://github.com/sjoleee/very-simple-portfolio/assets/82137004/9d164f7d-cc24-4
 - 📱 **반응형**으로 개발되어 있습니다.
 
 
+  <br />
+
+# change log
+
+> `23.05.18` `project` `activity` `education` 의 `description` 항목에 `\n`을 입력하면 줄바꿈이 가능해졌어요.
+
 <br />
 
 # 🛠️ Usage
@@ -73,6 +79,7 @@ https://github.com/sjoleee/very-simple-portfolio/assets/82137004/9d164f7d-cc24-4
 - [workExperience](#workexperience)
 - [project](#project)
 - [activity](#activity)
+- [education](#education)
 - [🚨필독🚨 COLOR](#color-변경하기)
 - [SEO](#seo)
 - [Vercel 배포하기](#vercel-배포하기)
@@ -416,7 +423,7 @@ png 파일을 **`/public/images/workExperience/[id].png`** 경로에 저장해�
 
 지금까지 진행했던 프로젝트를 보여줄 수 있는 영역이에요.
 
-
+간략한 설명을 적는 `description`은 `\n`으로 줄바꿈이 가능합니다.<br />
 `data.json`의 `project`에 작성하실때, **`isTeam: boolean`** 을 기입함으로써 팀 프로젝트와 개인 프로젝트를 나눠서 보여주게 구성했어요.<br />
 `isTeam: true`인 항목끼리 팀 프로젝트에 배열 역순으로 보여지고, `isTeam: false`인 항목끼리 개인 프로젝트에 배열 역순으로 보여집니다.
 
@@ -426,6 +433,7 @@ png 파일을 **`/public/images/workExperience/[id].png`** 경로에 저장해�
   "project": [
     {
       "name": "팀 프로젝트 1",
+      "description": "프로젝트에 대한 간단한 설명을 적을 수 있습니다.\n 어떤 프로젝트인지 주제나 강조하고 싶은 부분을 적어보세요.",
       "isTeam": true,
     },
     {
@@ -474,6 +482,7 @@ image 경로는  **`/public/images/project/[id].md`** 입니다.
 <img width="960" alt="image" src="https://github.com/sjoleee/very-simple-portfolio/assets/82137004/25b4c229-d577-4bc7-89e7-2629e3660eb4">
 
 대회, 수상, 해커톤 등 각종 경험을 작성하는 곳이에요.<br />
+간략한 설명을 적는 `description`은 `\n`으로 줄바꿈이 가능합니다.<br />
 여기는 `markdown` 이나 `image` 를 사용할 수 없습니다.<br />
 **굳이 여기까지...?** 라는 생각에 간단한 설명 정도만 문자열로 출력하게 해두었는데, 필요하다면 `markdown` 및 `image` 를 사용할 수 있도록 업데이트해볼게요!<br />
 
@@ -485,7 +494,7 @@ image 경로는  **`/public/images/project/[id].md`** 입니다.
       "id": 0,
       "name": "첫번째 활동",
       "period": ["2022. 06", "2022. 08"],
-      "description": "첫번째 활동에 대한 간략한 설명"
+      "description": "첫번째 활동에 대한\n 간략한 설명"
     },
     {
       "id": 1,
@@ -507,6 +516,7 @@ image 경로는  **`/public/images/project/[id].md`** 입니다.
 <img width="960" alt="image" src="https://github.com/sjoleee/very-simple-portfolio/assets/82137004/2ddbd623-21f9-4521-8d11-05e6353726d1">
 
 전공, 부트캠프, 각종 교육에 대해 적어주세요.<br />
+간략한 설명을 적는 `description`은 `\n`으로 줄바꿈이 가능합니다.<br />
 위의 [activity](#activity)와 동일한 구성이라 넘어갑니다~ 휘리릭~ 😇
 
 
@@ -519,7 +529,7 @@ image 경로는  **`/public/images/project/[id].md`** 입니다.
       "id": 0,
       "name": "첫번째 교육",
       "period": ["2013. 02", "2020. 02"],
-      "description": "첫번째 교육에 대한 간략한 설명"
+      "description": "첫번째 교육에\n 대한 간략한 설명"
     },
     {
       "id": 1,
