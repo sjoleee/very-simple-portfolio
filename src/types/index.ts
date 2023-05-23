@@ -28,6 +28,14 @@ export interface ProjectProps {
   imgSrc?: string;
 }
 
+export interface AwardProps {
+  id: number;
+  name: string;
+  date: string;
+  organizer: string;
+  description: string;
+}
+
 export interface DataProps {
   resumeTitle: {
     title: string;
@@ -53,4 +61,5 @@ export interface DataProps {
     date: string;
     organizer: string;
   }[];
+  award: AwardProps[];
 }
