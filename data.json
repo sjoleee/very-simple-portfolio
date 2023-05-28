@@ -93,5 +93,15 @@
       "date": "2019. 07. 28",
       "organizer": "ETS"
     }
+  ],
+
+  "award": [
+    {
+      "id": 0,
+      "name": "첫번째 수상",
+      "date": "2019. 07. 28",
+      "organizer": "수여기관",
+      "description": "첫번째 수상에 대한 간략한 설명"
+    }
   ]
 }

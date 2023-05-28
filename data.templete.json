@@ -58,5 +58,15 @@
       "date": "",
       "organizer": ""
     }
+  ],
+
+  "award": [
+    {
+      "id": 0,
+      "name": "",
+      "date": "",
+      "organizer": "",
+      "description": ""
+    }
   ]
 }
